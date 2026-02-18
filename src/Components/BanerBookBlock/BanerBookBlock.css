@@ -1,0 +1,23 @@
+.baner_block {
+    width: 80px;
+    height: 30px;
+    background-color: red;
+    border-radius: 20px;
+    text-align: center;
+    padding: 5px 15px;
+    font-weight: bold;
+
+
+}
+
+.baner_Акція {
+    background-color: green;
+}
+
+.baner_Новинка {
+    background-color: blue;
+}
+
+.baner_Ексклюзив {
+    background-color: red;
+}

@@ -1,0 +1,69 @@
+import { ReactNode, useRef } from "react";
+
+import BlockBook from "../BlockBook/BlockBook";
+import "./Main.css";
+import ShowPagePopularity from "../ShowPagePopularity/ShowPagePopularity";
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
+import 'swiper/css'
+import { Navigation, Pagination } from 'swiper/modules'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import type { Swiper as SwiperType } from 'swiper'
+import { BanerType } from "../BanerBookBlock/BanerBookBlock";
+
+
+type MainProps = {
+    children?: ReactNode;
+}
+
+export default function Main({ children }: MainProps) {
+
+    const swiperRef = useRef<SwiperType | null>(null)
+
+    return (
+        <main>
+            {children}
+            <div className="swiperContainer">
+                <Swiper
+                    slidesPerView={2.5}
+                    spaceBetween={40}
+                    modules={[Navigation, Pagination]}
+                    pagination={{ type: 'progressbar', el: '.custom-pagination-container' }}
+                    onSwiper={(swiper: SwiperType) => (swiperRef.current = swiper)}
+                    className="swiperMain"
+                >
+                    <SwiperSlide className="slideMain" />
+                    <SwiperSlide className="slideMain" />
+                    <SwiperSlide className="slideMain" />
+                    <SwiperSlide className="slideMain" />
+                    <SwiperSlide className="slideMain" />
+                    <SwiperSlide className="slideMain" />
+                    <SwiperSlide className="slideMain" />
+                    <SwiperSlide className="slideMain" />
+                    <SwiperSlide className="slideMain" />
+                    <SwiperSlide className="slideMain" />
+                    <SwiperSlide className="slideMain" />
+                </Swiper>
+                <button
+                    className="prevSlide"
+                    onClick={() => swiperRef.current?.slideNext()}
+                >
+                    ›
+                </button>
+
+                <button
+                    className="nextSlide"
+                    onClick={() => swiperRef.current?.slidePrev()}
+                >
+                    ‹
+                </button>
+
+                <div className="custom-pagination-container"></div>
+            </div>
+
+            <ShowPagePopularity textBaner={BanerType.Exclusive} />
+            <ShowPagePopularity textBaner={BanerType.New} />
+
+        </main>
+    )
+}

@@ -1,0 +1,125 @@
+main {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #151412;
+
+}
+
+.swiperMain {
+    height: 400px;
+    width: 100%;
+    --swiper-theme-color: #ffffff;
+    overflow: hidden;
+    margin-top: 20px;
+    position: relative;
+    padding: 50px !important;
+
+}
+
+.slideMain {
+    width: 50%;
+    height: 100%;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-bottom: 100px;
+    z-index: 1000;
+
+
+}
+
+.nextSlide {
+    background-color: white;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+    left: 10px;
+    cursor: pointer;
+
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 0;
+
+    transition: 0.5s;
+}
+
+
+
+.swiperContainer {
+    position: relative;
+    overflow: hidden;
+
+
+
+}
+
+.custom-pagination-container {
+    height: 2px !important;
+    background: rgba(255, 255, 255, 0.3);
+
+    width: 93% !important;
+
+
+    position: absolute;
+    bottom: 0 !important;
+    top: auto !important;
+
+    left: 50% !important;
+    transform: translateX(-50%);
+
+    z-index: 10;
+}
+
+.custom-pagination-container .swiper-pagination-progressbar-fill {
+    background: white !important;
+    height: 100%;
+    display: block;
+
+
+}
+
+.prevSlide {
+    background-color: white;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+    right: 10px;
+    cursor: pointer;
+
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: 0.5s;
+
+    border: 0;
+}
+
+.prevSlide:hover,
+.nextSlide:hover {
+    border: 1px solid white;
+    transition: 0.5s;
+}
+
+.prevSlide span,
+.nextSlide span {
+    color: white;
+    font-size: 1.5em;
+    align-items: center;
+    align-content: center;
+
+
+}
+
+.prevSlide,
+.nextSlide {
+    font-size: 20px;
+    color: white;
+
+}

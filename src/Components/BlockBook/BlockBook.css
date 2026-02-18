@@ -1,0 +1,116 @@
+.block {
+    width: 280px;
+    border-radius: 15px;
+    background-color: white;
+    height: auto;
+    padding: 0;
+    text-align: left;
+    background-color: rgb(26, 26, 26);
+    padding: 20px;
+    transition: 0.3s ease-in-out;
+    background-color: #24211e;
+    position: relative;
+}
+
+.baner {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+}
+
+.author_block {
+
+    color: gray
+}
+
+.name_block {
+
+    color: white;
+}
+
+.price_block {
+
+    color: white;
+}
+
+
+
+.background_img {
+    width: 100%;
+    height: 220px;
+    border: 1px solid white;
+    background-color: black;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+}
+
+
+.background_img img {
+    width: 220px;
+    height: 180px;
+    border-radius: 5px;
+    border: 3px solid white;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.block:hover .background_img img {
+    transform: scale(0.9);
+}
+
+.block:hover .background_img {
+    transform: translateY(10px);
+}
+
+.block:hover .showKorzyna {
+    transform: translateY(0);
+    max-height: 100px;
+    opacity: 1;
+}
+
+.showKorzyna {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    height: 60px;
+    border-radius: 25px;
+    background-color: transparent;
+    justify-content: space-between;
+    transform: translateY(100px);
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.addFavourite {
+    border: 1px solid white;
+    border-radius: 50%;
+    height: 100%;
+    width: 20%;
+
+
+
+}
+
+.addKorzyna {
+    width: 77%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: white;
+
+
+}
+
+.addFavourite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-size: 1em;
+
+
+}

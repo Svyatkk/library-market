@@ -1,0 +1,105 @@
+.korz {
+    width: 100%;
+    height: 200px;
+
+
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.deleteBookFromKorzyna {
+    color: red;
+
+    padding: 20px;
+    font-size: 1.8em;
+
+
+
+}
+
+
+.backgroundImgBook {
+    width: 150px;
+    height: 90%;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.imgKorz {
+    width: 80%;
+    height: 80%;
+    border: 1px solid white;
+}
+
+.korz>div:nth-child(2) {
+    color: black;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+
+
+    height: 80%;
+    box-sizing: border-box;
+}
+
+.korz>div:nth-child(2) p {
+    font-size: 1.8em;
+    margin: 0;
+    padding: 0;
+    color: white;
+
+}
+
+.sectionKorz {
+    display: flex;
+
+}
+
+
+
+.sectionKorz>div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    justify-content: space-around;
+
+}
+
+.addANDdelete {
+    border: 1px solid white;
+    display: flex;
+    border-radius: 25px;
+    width: 120px;
+    align-items: center;
+    font-size: 1.8em;
+    justify-content: space-between;
+}
+
+.addANDdelete button {
+    padding: 10px;
+    border-radius: 50%;
+    height: 34px;
+    width: 34px;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+
+}
+
+.addANDdelete button:first-child {
+    color: darkgray;
+}

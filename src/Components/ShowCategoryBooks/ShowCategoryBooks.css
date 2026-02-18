@@ -1,0 +1,11 @@
+.catpage {
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 15px;
+    padding: 4px;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid white;
+
+}
