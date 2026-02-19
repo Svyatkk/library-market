@@ -9,7 +9,7 @@ import { Navigation, Pagination } from 'swiper/modules'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import type { Swiper as SwiperType } from 'swiper'
-import { BanerProps } from "../BanerBookBlock/BanerBookBlock";
+import { BanerProps, BanerType } from "../BanerBookBlock/BanerBookBlock";
 
 type MainProps = {
     children?: ReactNode;
@@ -60,9 +60,9 @@ export default function Main({ children }: MainProps) {
                 <div className="custom-pagination-container"></div>
             </div>
 
-            <ShowPagePopularity textBaner="Ексклюзив" />
-            <ShowPagePopularity textBaner="Акція" />
-            <ShowPagePopularity textBaner="Новинка" />
+            <ShowPagePopularity textBaner={BanerType.Exclusive} />
+            <ShowPagePopularity textBaner={BanerType.Salary} />
+            <ShowPagePopularity textBaner={BanerType.New} />
         </main>
     )
 }

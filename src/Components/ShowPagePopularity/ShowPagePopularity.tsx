@@ -2,7 +2,6 @@ import "./ShowPagePopularity.css"
 import BlockBook from "../BlockBook/BlockBook"
 import { books, BooksParam, calcSalary } from "../../Data/book"
 import BanerBookBlock from "../BanerBookBlock/BanerBookBlock"
-import { BanerProps } from "../BanerBookBlock/BanerBookBlock"
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import 'swiper/css'
 import { Navigation, Pagination } from 'swiper/modules'
@@ -10,9 +9,9 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import type { Swiper as SwiperType } from 'swiper'
 import { useEffect, useRef, useState } from "react"
+import { BanerType } from "../BanerBookBlock/BanerBookBlock"
 
-
-export default function ShowPagePopularity({ textBaner }: BanerProps) {
+export default function ShowPagePopularity({ textBaner }: { textBaner: BanerType | null }) {
 
     const swiperRef = useRef<SwiperType | null>(null)
 
@@ -20,13 +19,13 @@ export default function ShowPagePopularity({ textBaner }: BanerProps) {
         if (!textBaner) return []
 
         switch (textBaner) {
-            case 'Ексклюзив':
+            case BanerType.Exclusive:
                 return books.filter(book => book.price > 300)
 
-            case 'Акція':
+            case BanerType.Salary:
                 return books.filter(book => book.salarydiscount === true)
 
-            case 'Новинка':
+            case BanerType.New:
                 return books.filter(book => book.price > 100)
 
             default:
