@@ -25,6 +25,7 @@ export default function CatalogPanel({ isOpen, onClose }: Props) {
 
                 </div>
 
+
                 <div className="wrapperButtons">
                     {catalogs.map(catalog =>
                         <>

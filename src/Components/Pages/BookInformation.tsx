@@ -6,21 +6,15 @@ import './BookInformation.css';
 import Nav from '../Nav/Nav';
 import { catalogs } from '../../Data/book';
 import { Link } from 'react-router-dom';
-
+import { getBookById } from '../../services/book.service';
 export default function BookInformation() {
 
     const { id } = useParams();
 
 
+    const currentId = Number(id);
+    const currentBook = getBookById(currentId);
 
-
-
-    const currentId = Number(id)
-
-
-    const currentBook = books.find(
-        book => book.id === currentId
-    );
     if (!currentBook) {
         return <h2 className="titleBook">Книгу не знайдено</h2>;
     }
