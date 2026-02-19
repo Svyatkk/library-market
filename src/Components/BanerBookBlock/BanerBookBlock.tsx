@@ -1,11 +1,16 @@
 import './BanerBookBlock.css'
 
 
+export enum BanerType {
+    Salary = 'Акція',
+    New = 'Новинка',
+    Exclusive = 'Ексклюзив',
+}
 
 
 export type BanerProps = {
 
-    textBaner?: 'Акція' | 'Новинка' | 'Ексклюзив'
+    textBaner?: BanerType | null
 }
 
 export default function BanerBookBlock({ textBaner }: BanerProps) {
