@@ -10,10 +10,9 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import type { Swiper as SwiperType } from 'swiper'
 import { useEffect, useRef, useState } from "react"
-import { BanerType } from "../BanerBookBlock/BanerBookBlock"
 
 
-export default function ShowPagePopularity({ textBaner }: { textBaner: BanerType | null }) {
+export default function ShowPagePopularity({ textBaner }: BanerProps) {
 
     const swiperRef = useRef<SwiperType | null>(null)
 
@@ -21,13 +20,13 @@ export default function ShowPagePopularity({ textBaner }: { textBaner: BanerType
         if (!textBaner) return []
 
         switch (textBaner) {
-            case BanerType.Exclusive:
+            case 'Ексклюзив':
                 return books.filter(book => book.price > 300)
 
-            case BanerType.Salary:
+            case 'Акція':
                 return books.filter(book => book.salarydiscount === true)
 
-            case BanerType.New:
+            case 'Новинка':
                 return books.filter(book => book.price > 100)
 
             default:
