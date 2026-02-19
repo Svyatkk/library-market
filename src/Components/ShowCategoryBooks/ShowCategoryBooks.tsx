@@ -6,7 +6,7 @@ import Nav from '../Nav/Nav';
 import { catalogs } from '../../Data/book';
 import BlockBook from '../BlockBook/BlockBook';
 import './ShowCategoryBooks.css';
-
+import { filterBooksByCategory } from '../../services/bookFilter.service'
 
 
 
@@ -17,14 +17,9 @@ export default function ShowCategoryBooks() {
     const decodedMain = mainCategory ? decodeURIComponent(mainCategory) : '';
     const decodedSub = subCategory ? decodeURIComponent(subCategory) : null
 
-    const filteredBooks = books.filter(book => {
-        return book.catalog.some(cat => {
-            if (decodedSub) {
-                return cat.mainCategory === decodedMain && cat.subCategory === decodedSub
-            }
-            return cat.mainCategory === decodedMain
-        })
-    })
+    const filteredBooks = filterBooksByCategory(books, decodedMain, decodedSub);
+
+
 
     return (
         <>
